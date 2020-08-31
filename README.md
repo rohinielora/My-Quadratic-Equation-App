@@ -1,2 +1,2 @@
-# My-Quadratic-Equation-App
+# MyQuadraticEquationApp
 My Quadratic Equation App
