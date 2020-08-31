@@ -35,6 +35,7 @@ if __name__ == '__main__':
  
  	st.title("Quadratic equation")
  	st.markdown("Plot the quadratic equation from the given below axis for the following equation:")
+ 	st.markdown("by Rohini Das")
  	st.markdown("ax^2 + b*x + c")
 
  	st.sidebar.markdown("Controls")
