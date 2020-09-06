@@ -16,6 +16,7 @@ def quadratic_eq(coeff_a, coeff_b, coeff_c, start_x, end_x, num_steps):
 
 	fig, ax = plt.subplots()
 	plt.title("Quadratic equation")
+	st.markdown("by Rohini Das")
 	plt.xlabel("X")
 	plt.ylabel("Y")
 	plt.plot([start_x,end_x],[0,0])
