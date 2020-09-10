@@ -11,16 +11,55 @@ def quadratic_eq(coeff_a, coeff_b, coeff_c, start_x, end_x, num_steps):
 
 	x = np.linspace(start_x, end_x, num_steps)
 
+	#print(x)
+
+
 
 	y = a*x**2 + b*x + c
+
+
+	#print(y)
+
 
 	fig, ax = plt.subplots()
 	plt.title("Quadratic equation")
 	st.markdown("by Rohini Das")
 	plt.xlabel("X")
+
 	plt.ylabel("Y")
-	plt.plot([start_x,end_x],[0,0])
-	ax.plot(x, y)
+
+
+	plt.plot([start_x, end_x], [0, 0], '--', label='x axis') #x axis
+
+	margin = 5
+
+	min_y = min(y)
+	max_y = max(y)
+
+	if max_y < 0 :
+		max_y = 0 
+
+	if min_y > 0 :
+		min_y = 0
+
+	plt.plot([0, 0], [min_y - margin, max_y + margin],'--', label='y axis') #y axis
+
+	if a != 0.0 : #axis of symmetry 
+		plt.plot([-b/(2.0*a), -b/(2.0*a)], [min(y), max(y)], ':', label='axis of symmetry')
+		#print(-b/2.0*a)
+
+	ax.plot(x, y, label='equation') #plotting the equation
+
+	ax.legend()
+
+
+
+
+
+
+
+
+
 
 	solution1 = 0
 	solution2 = 0
@@ -52,12 +91,12 @@ if __name__ == '__main__':
  	st.sidebar.markdown("Controls")
 
 
- 	coeff_a = st.sidebar.number_input("Insert coeff_a", value=1)
- 	coeff_b = st.sidebar.number_input("Insert coeff_b", value=2)
- 	coeff_c = st.sidebar.number_input("Insert coeff_c", value=4)
- 	start_x = st.sidebar.number_input('Insert a starting range', value=-10) 
- 	end_x = st.sidebar.number_input('Insert a end range', value=10)
- 	num_steps = st.sidebar.number_input('No. of points', value=10)
+ 	coeff_a = st.sidebar.number_input("Insert coeff_a", value=1.0, step= 1.0)
+ 	coeff_b = st.sidebar.number_input("Insert coeff_b", value=2.0, step= 1.0)
+ 	coeff_c = st.sidebar.number_input("Insert coeff_c", value=4.0, step= 1.0)
+ 	start_x = st.sidebar.number_input('Insert a starting range', value=-10, step= 10) 
+ 	end_x = st.sidebar.number_input('Insert a end range', value=10, step= 10)
+ 	num_steps = st.sidebar.number_input('No. of points', value=10, step= 10)
  	
 
 
