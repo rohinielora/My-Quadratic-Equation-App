@@ -96,7 +96,7 @@ if __name__ == '__main__':
  	coeff_c = st.sidebar.number_input("Insert coeff_c", value=4.0, step= 1.0)
  	start_x = st.sidebar.number_input('Insert a starting range', value=-10, step= 10) 
  	end_x = st.sidebar.number_input('Insert a end range', value=10, step= 10)
- 	num_steps = st.sidebar.number_input('No. of points', value=10, step= 10)
+ 	num_steps = st.sidebar.number_input('No. of points', value=10, step= 10, min_value= 3)
  	
 
 
